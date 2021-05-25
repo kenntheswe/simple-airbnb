@@ -1,17 +1,17 @@
+<div class="container">
+  <%= simple_form_for(@flat) do |f| %>
+    <%= f.error_notification %>
+    <%= f.error_notification message: f.object.errors[:base].to_sentence if f.object.errors[:base].present? %>
 
-<%= simple_form_for(@flat) do |f| %>
-  <%= f.error_notification %>
-  <%= f.error_notification message: f.object.errors[:base].to_sentence if f.object.errors[:base].present? %>
-
-  <div class="form-inputs">
-    <%= f.input :name %>
-    <%= f.input :address %>
-    <%= f.input :description %>
-    <%= f.input :price_per_night %>
-    <%= f.input :number_of_guests %>
-  </div>
-
-  <div class="form-actions">
-    <%= f.button :submit %>
-  </div>
-<% end %>
+    <div class="form-inputs">
+      <%= f.input :name, placeholder: "Kenny Smith" %>
+      <%= f.input :address, placeholder: "1-2-3 Marunouchi, Chiyoda-ku" %>
+      <%= f.input :description, placeholder: "Huge yard in front of the house, one master bedroom with king-sized bed..." %>
+      <%= f.input :price_per_night %>
+      <%= f.input :number_of_guests, prompt: "Please select", collection: 1..20 %>
+    </div>
+    <div class="form-actions btn btn-outline-success rounded mt-3">
+      <%= f.button :submit %>
+    </div>
+  <% end %>
+</div>

@@ -1,0 +1,16 @@
+.cards {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-gap: 24px;
+}
+
+.card-body {
+  border-radius: 8px;
+  box-shadow: 4px 4px 8px lightgray;
+  transition: transform 300ms ease;
+}
+
+.card-body:hover {
+  transform: scale(1.02);
+  background-color: #1EDD88;
+}
