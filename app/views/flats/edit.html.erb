@@ -1,6 +1,12 @@
 <div class="container">
-  <h1>Edit <%= @flat.name %></h1>
-  <%= render 'shared/form', flat: @flat %>
-  <%= link_to 'Show', @flat %> |
-  <%= link_to 'Back', flats_path %>
+  <div class="form">
+    <h1>Edit <%= @flat.name %></h1>
+    <%= render 'shared/form', flat: @flat %>
+  </div>
+  <%= link_to @flat, class: "btn btn-outline-secondary" do %>
+    <p class="m-0"><i class="fas fa-angle-left"></i> Back</p>
+  <% end %>
+  <%= link_to flats_path, class: "btn btn-outline-secondary" do %>
+    <p class="m-0"><i class="fas fa-home"></i> Home</p>
+  <% end %>
 </div>

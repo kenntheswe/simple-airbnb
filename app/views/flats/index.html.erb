@@ -3,7 +3,7 @@
   <div class="cards m-5">
     <% @flats.each do |flat| %>
       <div class="card-body" data-id="<%= flat.id %>">
-        <p class="m-0"><%= flat.name %></p>
+        <p class="card-title m-0"><%= flat.name %></p>
         <p class="m-0"><i class="fas fa-map-marker-alt"></i> <%= flat.address %></p>
         <p class="m-0"><i class="fas fa-yen-sign"></i> <%= flat.price_per_night %> per night</p>
         <div class="d-flex justify-content-between">

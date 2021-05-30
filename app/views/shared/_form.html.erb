@@ -8,9 +8,9 @@
     <%= f.input :price_per_night, placeholder: "1000" %>
     <%= f.input :number_of_guests, prompt: "Please select", collection: 1..20 %>
     <% if @flat.id %>
-      <%= f.submit "Update", class:"btn btn-outline-success my-3" %>
+      <%= f.submit "✅ Update", class:"btn btn-outline-success mt-4" %>
     <% else %>
-      <%= f.submit "Add a Flat", class:"btn btn-outline-success my-3" %>
+      <%= f.submit "➕ Add a Flat", class:"btn btn-outline-success mt-4" %>
     <% end %>
   <% end %>
 </div>
