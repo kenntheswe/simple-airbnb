@@ -1,16 +1,43 @@
 .cards {
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-columns: 1fr 1fr;
   grid-gap: 24px;
 }
 
 .card-body {
   border-radius: 8px;
   box-shadow: 4px 4px 8px lightgray;
-  transition: transform 300ms ease;
+  transition: transform 500ms ease;
+  p {
+    text-decoration: none;
+  }
 }
 
 .card-body:hover {
   transform: scale(1.02);
-  background-color: #1EDD88;
+  background-color: $green;
+}
+
+.card-info {
+  border-radius: 8px;
+  box-shadow: 4px 4px 8px lightgray;
+  padding: 16px;
+  a {
+    text-decoration: none;
+  }
+}
+
+.card-info #edit {
+  margin-right: 16px;
+  transition: color 300ms ease;
+  &:hover {
+    color: $green;
+  }
+}
+
+.card-info #delete {
+  transition: color 300ms ease;
+  &:hover {
+    color: $red;
+  }
 }

@@ -1,29 +1,20 @@
-<p id="notice"><%= notice %></p>
-
-<p>
-  <strong>Name:</strong>
-  <%= @flat.name %>
-</p>
-
-<p>
-  <strong>Address:</strong>
-  <%= @flat.address %>
-</p>
-
-<p>
-  <strong>Description:</strong>
-  <%= @flat.description %>
-</p>
-
-<p>
-  <strong>Price per night:</strong>
-  <%= @flat.price_per_night %>
-</p>
-
-<p>
-  <strong>Number of guests:</strong>
-  <%= @flat.number_of_guests %>
-</p>
-
-<%= link_to 'Edit', edit_flat_path(@flat) %> |
-<%= link_to 'Back', flats_path %>
+<%= render 'shared/banner', img_path: "https://source.unsplash.com/1600x900/?bedroom", flat: @flat.name %>
+<div class="container my-5">
+  <div class="card-info">
+    <p class="m-0"><i class="fas fa-map-marker-alt"></i> <%= @flat.address %></p>
+    <p class="m-0"><i class="fas fa-info-circle"></i> <%= @flat.description %></p>
+    <p class="m-0"><i class="fas fa-yen-sign"></i> <%= @flat.price_per_night %> per night</p>
+    <p class="m-0"><i class="fas fa-users"></i> <%= @flat.number_of_guests %></p>
+    <div class="card-edit mt-3 d-flex justify-content-end">
+      <%= link_to edit_flat_path(@flat) do %>
+        <p id="edit" class="mb-0">Edit <i class="fas fa-edit"></i></p>
+      <% end %>
+      <%= link_to flats_path, data: { confirm: "Are you sure?"} do %>
+        <p id="delete" class="mb-0">Delete <i class="fas fa-trash-alt"></i></p>
+      <% end %>
+    </div>
+  </div>
+  <%= link_to flats_path, class: "btn btn-secondary mt-4" do %>
+    <p class="m-0 fw-bold">Back</p>
+  <% end %>
+</div>

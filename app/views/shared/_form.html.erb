@@ -1,0 +1,16 @@
+<div class="container">
+  <%= simple_form_for(@flat) do |f| %>
+    <%= f.error_notification %>
+    <%= f.error_notification message: f.object.errors[:base].to_sentence if f.object.errors[:base].present? %>
+    <%= f.input :name, placeholder: "Kenny Smith" %>
+    <%= f.input :address, placeholder: "1-2-3 Marunouchi, Chiyoda-ku" %>
+    <%= f.input :description, placeholder: "Huge yard in front of the house, one master bedroom with king-sized bed..." %>
+    <%= f.input :price_per_night, placeholder: "1000" %>
+    <%= f.input :number_of_guests, prompt: "Please select", collection: 1..20 %>
+    <% if @flat.id %>
+      <%= f.submit "Update", class:"btn btn-outline-success my-3" %>
+    <% else %>
+      <%= f.submit "Add a Flat", class:"btn btn-outline-success my-3" %>
+    <% end %>
+  <% end %>
+</div>

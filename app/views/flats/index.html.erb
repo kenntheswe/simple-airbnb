@@ -1,12 +1,17 @@
+<%= render 'shared/banner', img_path: "https://images.pexels.com/photos/279719/pexels-photo-279719.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940", flat: "Flats" %>
 <div class="container">
-  <h1>Flats</h1>
-  <div class="cards">
+  <div class="cards m-5">
     <% @flats.each do |flat| %>
-      <div class="card-body">
-        <p class="m-0 fw-bold"><%= flat.name %></p>
-        <p class="m-0"><%= flat.address %></p>
-        <p class="m-0"><%= flat.price_per_night %></p>
-        <p class="m-0"><%= flat.number_of_guests %></p>
+      <div class="card-body" data-id="<%= flat.id %>">
+        <p class="m-0"><%= flat.name %></p>
+        <p class="m-0"><i class="fas fa-map-marker-alt"></i> <%= flat.address %></p>
+        <p class="m-0"><i class="fas fa-yen-sign"></i> <%= flat.price_per_night %> per night</p>
+        <div class="d-flex justify-content-between">
+        <p class="m-0"><i class="fas fa-users"></i> <%= flat.number_of_guests %></p>
+        <%= link_to flat_path(flat) do %>
+          <i class="fas fa-arrow-alt-circle-right"></i>
+        <% end %>
+        </div>
       </div>
     <% end %>
   </div>
