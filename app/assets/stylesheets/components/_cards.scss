@@ -8,14 +8,35 @@
   border-radius: 8px;
   box-shadow: 4px 4px 8px lightgray;
   transition: transform 500ms ease;
-  p {
+  a {
     text-decoration: none;
   }
 }
 
 .card-body:hover {
   transform: scale(1.02);
-  background-color: $green;
+  background-color: $light-cyan;
+}
+
+.card-body #more-info {
+  transition: color 300ms ease;
+  &:hover {
+    color: $yellow;
+  }
+}
+
+.card-body #edit {
+  transition: color 300ms ease;
+  &:hover {
+    color: $green;
+  }
+}
+
+.card-body #delete {
+  transition: color 300ms ease;
+  &:hover {
+    color: $red;
+  }
 }
 
 .card-title {
@@ -29,20 +50,5 @@
   padding: 16px;
   a {
     text-decoration: none;
-  }
-}
-
-.card-info #edit {
-  margin-right: 16px;
-  transition: color 300ms ease;
-  &:hover {
-    color: $green;
-  }
-}
-
-.card-info #delete {
-  transition: color 300ms ease;
-  &:hover {
-    color: $red;
   }
 }
