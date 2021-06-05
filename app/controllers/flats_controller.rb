@@ -3,12 +3,11 @@ class FlatsController < ApplicationController
 
   # GET /flats or /flats.json
   def index
-    @flats = Flat.all
-    @markers = @flats.geocoded.map do |flat|
-      {
-        lat: flat.latitude,
-        lng: flat.longitude
-      }
+    if params[:query].present?
+      @query = params[:query]
+      @flats = Flat.where("name LIKE ?", "%#{params[:query]}%")
+    else
+      @flats = Flat.all
     end
   end
 

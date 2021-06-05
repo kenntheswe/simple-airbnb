@@ -1,7 +1,7 @@
-<div class="container">
+<div class="form">
   <h1>Add a Flat</h1>
   <%= render 'shared/form', flat: @flat %>
-  <%= link_to flats_path do %>
-    <p class="m-0"><i class="fas fa-angle-left"></i> Back</p>
-  <% end %>
 </div>
+<%= link_to flats_path, class: "btn btn-outline-secondary" do %>
+  <p class="m-0"><i class="fas fa-angle-left"></i> Back</p>
+<% end %>
