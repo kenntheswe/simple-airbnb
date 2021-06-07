@@ -6,13 +6,13 @@ Flat.create!(
   name: 'Light & Spacious Flat Meguro',
   address: '1-2-3 Meguro, Tokyo',
   description: 'A lovely summer feel for this spacious garden flat. Two double bedrooms, open plan living area, large kitchen and a beautiful conservatory',
-  price_per_night: 5000,
+  price_per_night: 5700,
   number_of_guests: 3
 )
 Flat.create!(
   name: 'High Floor Flat with Good View in Roppongi',
   address: '3-4-5 Roppongi, Tokyo',
-  description: 'Open-air balcony for perfect Tokyo night view. One king-sized double bed, separate toilet & shower and a fully equipped kitchenette',
+  description: 'Open-air balcony for perfect Tokyo night view. One king-sized double bed, separated toilet & shower and a fully equipped kitchenette',
   price_per_night: 11000,
   number_of_guests: 2
 )
@@ -33,7 +33,7 @@ Flat.create!(
 Flat.create!(
   name: 'Proximity to Yokohama China Town',
   address: '7-2-1 , Yokohama',
-  description: '5-min walk to popular China Town in Yokohama. One king-sized bed, one shower room, two toilets and one huge kitchen',
+  description: '5-min walk to popular China Town in Yokohama. One king-sized bed, one shower room, separated toilet & one huge bathroom and one huge kitchen',
   price_per_night: 8800,
   number_of_guests: 2
 )
