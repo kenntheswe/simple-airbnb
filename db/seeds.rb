@@ -32,8 +32,8 @@ Flat.create!(
 )
 Flat.create!(
   name: 'Proximity to Yokohama China Town',
-  address: '7-2-1 , Yokohama',
-  description: '5-min walk to popular China Town in Yokohama. One king-sized bed, one shower room, separated toilet & one huge bathroom and one huge kitchen',
+  address: '7-2-1 Yokohama, Kanagawa',
+  description: '5-min walk to popular China Town in Yokohama. One king-sized bed, one shower room, separated toilet & one huge bathroom and one kitchen',
   price_per_night: 8800,
   number_of_guests: 2
 )
